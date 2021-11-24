@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int gm;
+	int mm;
+	int xm;
+	int s=100;
+    int my;
+	for(int gm=0;gm<=100/5;gm++)
+	{
+		for(int mm=0;mm<=100/3;mm++)
+		{
+			xm=(s-5*gm-3*mm)*3;
+			my=gm+mm+xm;
+		// xj=s-gj-mj;
+		// my=5*gj+3*mj+xj/3;
+		//本来准备判定是否为100元钱，但是发现还需要对小鸡进行求余判定，最后改为一直小鸡的钱数，判定是否为100只鸡。
+		 if(my==100)
+	    	{
+			 cout <<"公猫="<<gm<<' '<<"母猫="<<mm<<' '<<"小猫="<<xm<< endl;
+		    }
+		}
+	}
+    return 0;
+}
