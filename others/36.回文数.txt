@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    bool hui(int n);
+	int a;
+	while (cin >> a)
+	{
+		if (hui(a))
+			cout << "Y" << endl;
+		else
+			cout << "N" << endl;
+	}
+
+	return 0;
+}
+bool hui(int n)
+{
+	if (n < 0 || (n % 10 == 0 && n != 0)) {
+		return false;
+	}
+	unsigned i = n;
+	unsigned m = 0;
+	while (i > 0)
+	{
+		m = m * 10 + i % 10;
+		i /= 10;
+	}
+	return m == n;
+}
